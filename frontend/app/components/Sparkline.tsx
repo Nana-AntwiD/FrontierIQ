@@ -30,7 +30,7 @@ export default function Sparkline({ data, positive }: SparklineProps) {
             fontSize: '11px',
             color: '#fff'
           }}
-          formatter={(value: number) => [value, '']}
+          formatter={(value) => [value ?? '', '']}
           labelFormatter={() => ''}
         />
       </LineChart>

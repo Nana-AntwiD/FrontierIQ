@@ -78,10 +78,11 @@ export default async function Home() {
                     const isUp = change !== null && change > 0
 
                     return (
-                      <div
-                        key={indicator.id}
-                        className="bg-white/[0.03] border border-white/[0.08] rounded-lg p-5 hover:border-white/20 transition-colors"
-                      >
+                      <a
+                        href={`/indicator/${indicator.slug}`}
+                         key={indicator.id}
+                          className="bg-white/[0.03] border border-white/[0.08] rounded-lg p-5 hover:border-white/20 transition-colors block"
+                             >
                         {/* Name */}
                         <p className="text-white/50 text-xs mb-3">{indicator.name}</p>
 
@@ -123,7 +124,7 @@ export default async function Home() {
                         ) : (
                           <p className="text-white/20 text-sm mt-2">No data yet</p>
                         )}
-                      </div>
+                      </a>
                     )
                   })}
                 </div>
